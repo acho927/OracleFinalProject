@@ -1,0 +1,25 @@
+{
+  "name": "ethpriceoracle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy:oracle": "cd oracle && truffle migrate --network developement --reset -all && cd ..",
+    "deploy:caller": "cd caller && truffle migrate --network developement --reset -all && cd ..",
+    "deploy:all": "npm run deploy:oracle && npm run deploy:caller",
+    "deploy:console": "truffle console --network developement"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@binance/connector": "^3.0.0",
+    "axios": "^1.6.2",
+    "bn.js": "^5.2.1",
+    "loom-js": "^1.90.0",
+    "loom-truffle-provider": "^0.13.0",
+    "openzeppelin-solidity": "^3.4.2",
+    "truffle": "^5.11.5"
+  }
+}
